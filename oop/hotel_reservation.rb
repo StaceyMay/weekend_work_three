@@ -25,6 +25,14 @@ class HotelReservation
   end
 end
 
+new_room = HotelReservation.new(customer_name: "Stacey", date: "2-14-2017", room_number: 143)
+
+new_room.add_a_fridge
+new_room.add_a_crib
+new_room.add_a_custom_amenity("champagne showers")
+
+puts new_room.customer_name + " has a grand old in room " + new_room.room_number.to_s + " on " + new_room.date + " with: " + new_room.amenities.flatten.join(' ,').to_s + "!"
+
 
 # Write your own driver code below! Make sure your code tests the following:
 # The ability to change a room number even after a reservation has already been created

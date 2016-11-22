@@ -3,7 +3,11 @@
 # numbers, inclusive.
 
 def sum_of_range(array)
-
+  new_array = array.sort
+  first =new_array[0]
+  second = new_array[1]
+  range = (first..second).to_a
+  range.inject(0, :+)
 end
 
 # Driver code - don't touch anything below this line.
